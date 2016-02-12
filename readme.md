@@ -1,27 +1,36 @@
-# Laravel PHP Framework
+<h1>TVPage Web Developer Test </h1>
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+<p>Develop a web app that given an url, will give insight to what domains that web page is linking. In addition to the start url a link depth can be specified. In that case all pages within link depth distance should be part of the analysis.</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+<h2>Requirements:</h2>
+Use a (probably) free cloud platform to host the app or run locally and send instructions on how to run.
+<br />
+As a minimum the result should:
+<ol>
+<li>list all domains</li>
+<li>per domain have a drop down with the list of url in that domain.</li>
+<li>some graphic charts, for example a histogram.</li>
+<li>a responsive design: background processing while having a functional web page. </li>
+<li>Or request can be queued; submitting a query while investigating a previous result.</li>
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+<h2>Additional features:</h2>
+Add a mechanism to identify returning users and show them a history of searches.
 
-## Official Documentation
+<h2>To be delivered:</h2>
+<ul>
+<li>Fair estimation of the number of hours spent.</li>
+<li>The url to a working web site.</li>
+<li>All code behind it, both static and dynamic contents, in a comprehensible way.</li>
+<li>Short document describing:</li>
+<li>Functionality with pointers to the code; document should introduce code base, not replicate what can be read in <li>the code itself.</li>
+<li>Status of work</li>
+<li>What’s finished</li>
+<li>Todos</li>
+<li>Suggestions for improvements</li>
+<li>Additional deliverable:</li>
+<li>Suggestions how to test the web site</li>
+<li>Unit tests for the code</li>
+</ul>
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+url: <br/>
+http://antoniopacheco.comlu.com/
