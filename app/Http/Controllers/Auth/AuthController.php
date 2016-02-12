@@ -37,7 +37,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'logout']);
+    $this->middleware('guest', ['except' => ['logout', 'getLogout']]);
     }
 
     /**
@@ -69,4 +69,13 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+//     public function getLogout() 
+// {
+//     Auth::logout();
+
+//     $this->auth->logout();
+//     Session::flush();
+//     return redirect('/login');
+// }
 }

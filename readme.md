@@ -34,3 +34,7 @@ Add a mechanism to identify returning users and show them a history of searches.
 
 url: <br/>
 http://antoniopacheco.comlu.com/
+
+<h2>Instrucctions</h2>
+clone repository <br/>
+bower install 

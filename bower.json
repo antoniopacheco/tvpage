@@ -1,0 +1,22 @@
+{
+  "name": "tvpagetest",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Jesus Antonio Pacheco Morales <antonio_pacheco@outlook.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/antoniopacheco/tvpage",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.5.0"
+  }
+}
