@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use App\Domain;
 use App\Page;
 use Auth;
+use App\Search;
+use App\Searches_has_domain;
 class PagesController extends Controller
 {
 
@@ -42,9 +44,26 @@ class PagesController extends Controller
     			return response()->json(Page::where('domain_id',$dominio->id)->get());
     }
 
-    public function findByDomain(Request $request){
+    public function findDomain(Request $request){
+        $user = $request->user();
     	$inputs = $request->only('q');
     	$domains = Domain::where('domain', 'LIKE', '%'.$inputs['q'].'%')->get();
+        $search = new Search;
+        $search->query = $inputs['q'];
+        $search->user_id = $user->id;
+        $search->save();
+        foreach ($domains as $domain) {
+            $result = new Searches_has_domain;
+            $result->searches_id = $search->id;
+            $result->domains_id = $domain->id;
+            $result->save();
+        }
     	return response()->json($domains);
+    }
+
+    public function findByDomain(Request $request){
+    	$inputs = $request->only('domain');
+    	$pages = Page::where('domain_id',$inputs['domain'])->get();
+    	return response()->json($pages);
     }
 }

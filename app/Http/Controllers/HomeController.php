@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-
+use App\Search;
 class HomeController extends Controller
 {
     /**
@@ -22,8 +22,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('home');
+    public function index(Request $request){
+        $user = $request->user();
+        return view('home',['last_searches' => Search::where('user_id',$user->id)->orderBy('created_at')->limit(3)->get()]);
     }
 }

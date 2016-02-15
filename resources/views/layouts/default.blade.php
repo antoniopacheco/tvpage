@@ -90,6 +90,12 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
+            <li>
+              <a href="{{URL::route('index')}}">Home</a>
+            </li>
+            <li>
+              <a href="{{URL::route('domain.index')}}">Top Domains</a>
+            </li>
             {{-- <li>
             	<a href="{{ URL::route('delivery.index') }}"><i class="fa fa-truck"></i><span>Delivery</span>
             	</a>

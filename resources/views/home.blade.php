@@ -22,14 +22,27 @@
             <div class="box box-default">
                 <div class="box-header"><h3>Look for a Domain</h3></div>
                 <div class="box-body">
-                   <input type="text" id="sendDomain">
-                    <div class="nav-tabs-custom">
+                    <div class="nav-tabs-custom col-md-6">
+                        <input type="text" class="formcontrol" id="sendDomain"><br/>
+                        <h4>Search</h4>
                         <ul class="nav nav-tabs" id="search-tabs">
-                            
+                            @foreach($last_searches as $last_search)
+                                <li class="listTab">
+                                    <a href="#tab" data-toggle="tab" aria-expanded="true">
+                                        {{$last_search->query}}
+                                    </a>
+                                </li>
+
+                            @endforeach
                   
                         </ul>
                         <div class="tab-content" id="search-results">
                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Pages</h3>
+                        <div id="pagesofDomain">
                         </div>
                     </div>
                 </div>
